@@ -1,0 +1,152 @@
+
+
+#page-landing{
+    background-image: linear-gradient(  90deg, #1212c5  , #babaca );
+}
+#page-landing #container{
+    color: var(--color-text-in-primary);
+}
+#ig{
+    width: 42px;
+    height: 45px;
+    padding-bottom: 5px;
+}
+#yt{
+    width: 50px;
+    height: 50px;
+}
+    
+
+.logo-container img {
+    height: 10rem;
+}
+.logo-container{
+    text-align: center;
+    margin-bottom: 3.2rem;
+}
+.logo-container h2 {
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 4.6rem;
+    margin-top: 0.8rem;
+}
+.hero-image{
+    width: 100%;
+    border-radius: 20px;
+    
+}
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    margin: 3.2rem 0;
+}
+.buttons-container a{
+    width: 30rem;
+    height: 10.4rem;
+
+    border-radius: 0.8rem;
+    
+    
+    font: 700 2.4rem Archivo;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    
+    opacity: 0.7;
+
+    color: var(--color-button-text); 
+}
+.buttons-container a img{
+    width: 4rem;
+    margin-right: 2.4rem;
+}
+.buttons-container a.doar{
+   /* background: var(--color-primary-lighter);*/
+   background-image: linear-gradient( #0e0e74 ,var(--color-primary-light));
+    margin-right: 2.4rem;
+}
+.buttons-container a.doar:hover{
+
+    background:  #01017c
+}
+.buttons-container a.cadastro{
+   /* background: var(--color-secondary);*/
+   background-image: linear-gradient(#57f01a,#cdf2ce );
+   margin-right: 2.4rem;
+}
+.buttons-container a.cadastro:hover{
+    background: #29b107 
+}
+.buttons-container a.saiba-mais{
+    background-image: linear-gradient(#dc5795, #babaca);
+}
+.buttons-container a.saiba-mais:hover{
+    background:#af135c 
+}
+.total-connections{
+    font-size: 1.8rem;
+
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.total-connections img{
+    margin-left: 0.8rem;
+}
+
+@media(max-width:1100px){
+    :root{
+        font-size: 40%;}
+        .hero-image{
+            height: 45rem;}
+
+            #page-landing #container #social {
+                display: none;
+                 font-size: 1rem ;
+                
+            }
+}
+
+@media (min-width : 1100px){
+     #container {
+        max-width: 1100px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 360px 1fr  ;
+        grid-template-areas:
+        "social Proffy image "
+        "buttons buttons buttons"
+        "texting texting texting";
+        column-gap: 30px;
+        row-gap: 86px;
+    }
+    .logo-container{grid-area: Proffy;
+    text-align: initial;
+    align-self: center;
+    margin: 0;
+    }
+   
+    .hero-image{grid-area: image;
+        height: 260px;
+        width: 500px;
+        margin-right: 30rem;
+        margin-top: 10rem;
+        border-radius: 10px;   
+     }
+    .buttons-container{grid-area: buttons;
+    justify-content: flex-start;
+    margin: 0;
+    }
+    .total-connections{grid-area: texting;
+        color: #ffffff;
+    justify-self: end;
+    font-size: 1.2rem;}
+
+      
+    
+}
+

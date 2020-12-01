@@ -1,0 +1,79 @@
+#container #pageMore{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+#pageMore main{
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 74rem;
+  border-radius: 0.8rem;
+  margin: -3.2rem auto 3.2rem;
+  padding-top: 6.4rem ;}
+  #pageMore fieldset{
+    border: none;
+
+    padding: o 2.4rem;
+}
+#pageMore fieldset legend{
+    font: 700 2.4rem Archivo;
+    color: #224396;
+    margin-bottom: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    
+   
+    border-bottom: 1px solid #e6e6f0;
+}
+#pageMore fieldset .txt p{
+    font: 400 1rem Poppins ;
+    color: #67676b;
+    justify-content: center;
+}
+
+#pageMore fieldset .txt h1{
+    font: 700 1.5rem Archivo;
+    color: #224396;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e6e6f0;
+}
+#pageMore fieldset img{
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: .5rem;
+
+}
+#pageMore main footer{
+    padding: 4rem 2.4rem;
+    
+    background: #fafafc;
+    border-top: 1px solid #babaca;
+    margin-top: 6.4rem;
+}
+#doar{
+    color: #babaca;
+    background-image: linear-gradient(#3535c2,#151576) ;
+    font: 400 1.4rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+}

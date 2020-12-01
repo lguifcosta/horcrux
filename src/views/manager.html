@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme color" content="#8257E5">
+  <title>Horcrux</title>
+
+  <link rel="shortcut icon" href="images/logo.png" type="images/png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/partials/header.css">
+  <link rel="stylesheet" href="styles/partials/forms.css">
+  <link rel="stylesheet" href="styles/partials/manager.css">
+
+ 
+</head>
+
+<body id="manager">
+
+  <div id="container">
+    <header class="page-header">
+
+      <div class="top-bar-container">
+        <a href="/">
+          <img src="images/icons/back.svg" alt="Voltar">
+        </a>
+        
+        
+        <img  src="images/logo.png" id="logo" alt="horcrux">
+      </div>
+
+      <div class="header-content">
+        <strong></strong>
+     
+
+    </header>
+
+    <main>
+    {% if proffys == "" %}
+    <p class="no-results">Nenhum candidato a doações cadastrado.  </p>
+
+    {% else %}
+      
+    {%for proffy in proffys%}
+   
+
+    <article class="teacher-item" >
+        
+        <header>
+          
+            
+          <div>
+            <strong >{{proffy.name}}</strong> 
+          </div>
+        </header>
+        <p>
+          {{proffy.bio}}
+        </p>
+      
+        <p>whatsapp: {{proffy.number}}</p>
+          
+        <footer>
+        <p><strong>pix para doações <a href=""  >{{proffy.pix}}</a></strong></p>
+         <a href="https://api.whatsapp.com/send?l=pt_BR&phone=55{{proffy.number}}&text=Olá {{proffy.name}}  "
+         class="button" target="_blank">
+        <img src="/images/icons/whatsapp.svg" alt="whatsapp">entrar em contato</a>
+    
+        </footer>
+      </article>
+
+    
+      {%endfor%}
+     
+         
+      {% endif %}
+          
+          <div id="form">
+        <form action="/admit" id="register-ong"  method="POST">
+        <div class="input-block">
+          <label for="name">Nome</label>
+          <input name="name" id="name" required>
+        </div>
+        <div class="input-block" >
+          <label for="whatsapp">Whatsapp <small>(somente numeros)</small></label>
+          <input name="number" id = "whatssapp" type="text" required>
+        </div>
+        <div class="input-block" >
+          <label for="pix">sua chave pix <small>(caso seja uma instituição e deseje receber doações por meio da horcrux)</small></label>
+          <input name="pix" id = "pix" type="text" >
+        </div>
+        <div class="textarea-block">
+          <label for="bio">Descrição <p>(descreva o que deseja ou precisa, não se preocupe em poupar detalhes!)</p></label>
+          <textarea name="bio" id="bio" required></textarea>
+        </div>
+      
+      </form>
+    
+
+      <button type="submit" form="register-ong" id="admitir">admitir</button>
+    </div>
+    </main>
+  </div>
+<script>
+
+ 
+</script>
+</body>
+
+</html>

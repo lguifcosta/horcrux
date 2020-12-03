@@ -13,7 +13,7 @@ module.exports = async function(db, {proffyValue, classValue}){
         " ${proffyValue.bio}"
         );  
         `)
-console.log("CPjs")
+
     const proffy_id = insertedProffy.lastID
 
     //inserir dados na tabela 
@@ -26,7 +26,7 @@ console.log("CPjs")
             );
             `)
     
-console.log("CPjs2")
+
     
     //inserir dados na tabela class_schendule
 

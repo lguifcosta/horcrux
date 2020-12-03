@@ -1,5 +1,5 @@
 module.exports = async function(add,{profileValue} ){
-  console.log("adong1")
+  
   
     const selectedProfile = await add.run(`
     INSERT INTO profile(
@@ -15,7 +15,7 @@ module.exports = async function(add,{profileValue} ){
     )
     `)
     
-    console.log("adong2")
+ 
  
 
 }

@@ -5,7 +5,7 @@ const createProffy = require('./createProffy')
 function execute(db) {
     //criar as tabelas do banco de dados
 
-    console.log(db)
+    
 
     return db.exec(`
         CREATE TABLE IF NOT EXISTS proffys (

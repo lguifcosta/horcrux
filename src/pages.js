@@ -121,17 +121,17 @@ async function saveOng(req, res) {
       }
       try{
         
-        console.log(profileValue)
+        
       const add = await dataBase2
-      console.log("1")
+      
         await addOnONGs(add, {profileValue})
-        console.log("2")
+      
 
        
 
         return res.redirect("/ajudar")
     }catch(error){
-      console.log("dataBase2")
+      
     }
     }
 

@@ -2,14 +2,12 @@
     "version": 2,
     "builds": [
         {
-            "src": "/",
-            "use": "@vercel/node"
+            "src": "*html",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
-        {
-            "src": "/",
-            "dest": "/"
-        }
+        {"src":"/","dest": "pageLanding"}
+
     ]
 }

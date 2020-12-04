@@ -26,6 +26,8 @@ server
 .get("/log", login)
 .post("/loged", loged)
 .get("/654484854814815121494611vdvvds", manager)
-.post("/admit", admit)
+.post("/admit", admit);
 //start do servidor
-.listen(8080)
+const port = process.env.PORT || 3000;
+
+server.listen(port);

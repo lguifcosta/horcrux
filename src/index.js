@@ -27,7 +27,7 @@ server.post("/loged", loged)
 server.get("/654484854814815121494611vdvvds", manager)
 server.post("/admit", admit);
 //start do servidor
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 server.listen(port);
 console.log(`a porta é ${port}`)

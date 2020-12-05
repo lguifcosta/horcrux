@@ -2,8 +2,10 @@
     "version": 2,
     "builds": [
         {
-            "src": "npm run dev",
-            "use": "@vercel/node"
+            "src":"*html","use":"@vercel/static"
+        },
+        {
+            "src": "*.js","use": "@vercel/node"
         }
     ]
     

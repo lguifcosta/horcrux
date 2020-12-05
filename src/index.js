@@ -2,7 +2,7 @@
 //servidor
 const express = require('express')
 const server = express()
-
+const port = parseInt(process.env.PORT, 10) || 3000;
 
 const { pageLanding, donate, register, saveOng , pageMore , login , loged , manager , admit } = require('./pages')
 //configurar o nunjucks(template engine)
@@ -27,7 +27,10 @@ server.post("/loged", loged)
 server.get("/654484854814815121494611vdvvds", manager)
 server.post("/admit", admit);
 //start do servidor
-const port = process.env.PORT || 8080;
 
-server.listen(port);
+
+server.listen(port, (err)=>{
+    if (err) throw err 
+    console.log(`> pronto em http://localhost${port}`)
+});
 console.log(`a porta é ${port}`)

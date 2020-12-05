@@ -2,6 +2,7 @@ const { render } = require('nunjucks');
 const Database = require('./database/db')
 const dataBase2 = require('./database/admition');
 const nodemon = require('nodemon');
+const app = process.env.NODE_ENV !== 'production'
 
 //const {  getSubjects, convert } = require("./utils/format")
 
@@ -30,7 +31,7 @@ const profiles = await add.all("SELECT * FROM profile");
 
 
 
-  return res.render("donate.html", { profiles})
+  return  res.render("donate.html", { profiles})
 }
   
 function register (req, res) {

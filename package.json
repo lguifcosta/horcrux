@@ -1,7 +1,7 @@
 {
   "name": "horcrux",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "build": "nodemon src/index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -9,7 +9,7 @@
     "sqlite-async": "^1.1.0",
     "vercel": "^21.0.1"
   },
-  "startDependencies": {
+  "buildDependencies": {
     "nodemon": "^2.0.4"
   }
 }

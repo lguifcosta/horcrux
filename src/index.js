@@ -12,21 +12,20 @@ nunjucks.configure('src/views', {
     noCache: true,
 })
 //inicio e configuração do servidor
-server
 //receber os dados do rec.body
-.use(express.urlencoded({ extended: false}))
+server.use(express.urlencoded({ extended: false}))
 //configurar arquivos estaticos (css, scripts, imagens)
-.use(express.static("public"))
+server.use(express.static("public"))
 //rotas de aplicação
-.get("/", pageLanding)
-.get("/ajudar", donate)
-.get("/cadastro", register)
-.post("/saveOng" , saveOng)    
-.get("/more", pageMore )
-.get("/log", login)
-.post("/loged", loged)
-.get("/654484854814815121494611vdvvds", manager)
-.post("/admit", admit);
+server.get("/", pageLanding)
+server.get("/ajudar", donate)
+server.get("/cadastro", register)
+server.post("/saveOng" , saveOng)    
+server.get("/more", pageMore )
+server.get("/log", login)
+server.post("/loged", loged)
+server.get("/654484854814815121494611vdvvds", manager)
+server.post("/admit", admit);
 //start do servidor
 const port = process.env.PORT || 3000;
 

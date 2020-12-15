@@ -1,9 +1,11 @@
 {
   "name": "horcrux",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev":"node src/index.js"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "nunjucks": "^3.2.2",
     "sqlite-async": "^1.1.0",

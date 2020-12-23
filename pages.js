@@ -1,6 +1,6 @@
 const { render } = require('nunjucks');
-const Database = require('./database/db')
-const dataBase2 = require('./database/admition');
+const Database = require('./src/database/db')
+const dataBase2 = require('./src/database/admition');
 const nodemon = require('nodemon');
 
 //const {  getSubjects, convert } = require("./utils/format")
@@ -43,7 +43,7 @@ function pageMore (req, res){
 async function saveOng(req, res) {
   console.log("2")
   const createProffy = 
-  require('./database/createProffy')
+  require('./src/database/createProffy')
   
     const proffyValue = {
     name: req.body.name ,
@@ -112,7 +112,7 @@ async function saveOng(req, res) {
     async function admit (req,res){
       console.log("new ong admited")
       
-      const addOnONGs = require('./database/addOnONGs')
+      const addOnONGs = require('./src/database/addOnONGs')
       const profileValue = {
         name: req.body.name,
         number: req.body.number,

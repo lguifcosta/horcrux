@@ -4,7 +4,7 @@ const express = require('express')
 const server = express()
 const port = parseInt(process.env.PORT, 10) || 3000;
 
-const { pageLanding, donate, register, saveOng , pageMore , login , loged , manager , admit } = require('./pages')
+const { pageLanding, donate, register, saveOng , pageMore , login , loged , manager , admit } = require('./src/pages')
 //configurar o nunjucks(template engine)
 const nunjucks = require('nunjucks')
 nunjucks.configure('src/views', {

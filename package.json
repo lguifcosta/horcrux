@@ -1,8 +1,8 @@
 {
   "name": "horcrux",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "build": "node src/index.js"
+    "build": "index.js"
     
   },
   "dependencies": {

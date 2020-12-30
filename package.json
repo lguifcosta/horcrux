@@ -1,6 +1,6 @@
 {
   "name": "horcrux",
-  "main": "index.js",
+  "main": "pm2 start index.js",
   "scripts": {
     "build": "pm2 start index.js"
   },

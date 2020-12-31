@@ -2,10 +2,10 @@
   "name": "horcrux",
   "main": "index.js",
   "scripts": {
-    "build": "pm2 start index.js"
+    "fund": "pm2-runtime start.js",
+    "build": "node start.js"
   },
   "dependencies": {
-    
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "nunjucks": "^3.2.2",

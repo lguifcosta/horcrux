@@ -2,8 +2,9 @@
   "name": "horcrux",
   "main": "start.js",
   "scripts": {
-    "build": "pm2 start start.js"
-  },
+    "build": "pm2 start start.js",
+    "link" : "pm2 link y2yqk2ye6yuk33m ilu338eq7hmq8vf"
+   },
   "dependencies": {
     "cross-env": "^7.0.3",
     "express": "^4.17.1",

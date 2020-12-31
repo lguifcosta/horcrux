@@ -3,7 +3,8 @@
   "main": "index.js",
   "scripts": {
     "fund": "pm2-runtime start.js",
-    "build": "pm2 start start.js"
+    "build": "pm2 start start.js",
+    "link":"pm2 link y2yqk2ye6yuk33m ilu338eq7hmq8vf"
   },
   "dependencies": {
     "cross-env": "^7.0.3",

@@ -1,6 +1,6 @@
 {
   "name": "horcrux",
-  "main": "pm2 start start.js",
+  "main": "start.js",
   "scripts": {
     "build": "pm2 start start.js"
   },

@@ -2,35 +2,32 @@
 //servidor
 const express = require('express')
 const server = express()
-const port = parseInt(process.env.PORT, 10) || 3000;
 
-const { pageLanding, donate, register, saveOng , pageMore , login , loged , manager , admit } = require('./src/pages')
+
+const { pageLanding, donate, register, saveOng, pageMore, login, loged, manager, admit } = require('./src/pages')
 //configurar o nunjucks(template engine)
 const nunjucks = require('nunjucks')
 nunjucks.configure('src/views', {
-    express:server,
+    express: server,
     noCache: true,
 })
 //inicio e configuração do servidor
 //receber os dados do rec.body
-server.use(express.urlencoded({ extended: false}))
+server.use(express.urlencoded({ extended: false }))
 //configurar arquivos estaticos (css, scripts, imagens)
 server.use(express.static("public"))
 //rotas de aplicação
 server.get("/", pageLanding)
 server.get("/ajudar", donate)
 server.get("/cadastro", register)
-server.post("/saveOng" , saveOng)    
-server.get("/more", pageMore )
+server.post("/saveOng", saveOng)
+server.get("/more", pageMore)
 server.get("/log", login)
 server.post("/loged", loged)
-server.get("/654484854814815121494611vdvvds", manager)
+server.get("/654484854814815121494611vdvvds", manager)  
 server.post("/admit", admit);
 //start do servidor
+const port = process.env.PORT || 3000;
 
-
-server.listen(port, (err)=>{
-    if (err) throw err 
-    console.log(`> pronto em http://localhost${port}`)
-});
+server.listen(port);
 console.log(`a porta é ${port}`)
